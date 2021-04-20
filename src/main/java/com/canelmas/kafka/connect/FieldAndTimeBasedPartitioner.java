@@ -56,7 +56,7 @@ public final class FieldAndTimeBasedPartitioner<T> extends TimeBasedPartitioner<
         final String partitionsForFields = this.partitionFieldExtractor.extract(sinkRecord);
         final String partition = String.join(this.delim, partitionsForFields, partitionsForTimestamp);
 
-        log.info("Encoded partition : {}", partition);
+        log.debug("Encoded partition : {}", partition);
 
         return partition;
     }
@@ -66,7 +66,7 @@ public final class FieldAndTimeBasedPartitioner<T> extends TimeBasedPartitioner<
         final String partitionsForFields = this.partitionFieldExtractor.extract(sinkRecord);
         final String partition = String.join(this.delim, partitionsForFields, partitionsForTimestamp);
 
-        log.info("Encoded partition : {}", partition);
+        log.debug("Encoded partition : {}", partition);
 
         return partition;
     }
